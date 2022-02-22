@@ -1,7 +1,7 @@
 /*
  * @Author: jonty
  * @Date: 2022-02-17 22:06:48
- * @LastEditTime: 2022-02-19 22:07:57
+ * @LastEditTime: 2022-02-22 21:43:44
  * @Description: 返回一个数组
  * @Reference: 
  * @FilePath: \router-tutorial\src\data\getInvioces.js
@@ -50,3 +50,9 @@ export function getInvoice(number) {
     )
 }
 
+// 法3：删除一条记录
+export function deleteInvoive(number) {
+    invioces = invioces.filter(
+        invoice => invoice.number != number
+    )
+}

@@ -1,7 +1,7 @@
 /*
  * @Author: jonty
  * @Date: 2022-02-16 22:23:46
- * @LastEditTime: 2022-02-18 22:26:09
+ * @LastEditTime: 2022-02-22 21:47:40
  * @Description: 
  * @Reference: 
  * @FilePath: \router-tutorial\src\index.js
@@ -12,7 +12,7 @@ import './index.css';
 import App from './App';
 import Expense from './routes/expense';
 import Invoice from './routes/invoice';
-import SubInvoice from './routes/subInvoice';
+import SubInv from './routes/subInv';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 ReactDOM.render(
@@ -21,7 +21,8 @@ ReactDOM.render(
       <Route path='/' element={<App />} >
         <Route path='expense' element={<Expense />} />
         <Route path='invoice' element={<Invoice />} >
-          <Route path=':invoiceId' element={<SubInvoice />} />  {/* :x 表示匹配参数 */}
+
+          <Route path=':invoiceId' element={<SubInv />} />  {/* :x 表示匹配参数 */}
         </Route>
 
         {/* this "no match" case */}
